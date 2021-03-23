@@ -1,0 +1,261 @@
+#plane {
+    position: relative;
+    width: 100%;
+    height: calc(100vw * 0.5625);
+}
+
+#element-pier {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: -18%;
+    left: -5%;
+    z-index: 400;
+}
+
+#boat-page-two {
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 65%;
+    top: 0%;
+    animation: boatFloat 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+#element-kiosk {
+    position: absolute;
+    width: 7%;
+    height: auto;
+    top: 45%;
+    left: 55%;
+    z-index: 401;
+}
+
+/* Hover animation*/
+
+#element-sign-en:hover {
+    transform: scale(1.08);
+}
+
+#element-sign-to:hover {
+    transform: scale(1.08);
+}
+
+#sign-to-div:hover > #box-seven {
+    display: block;
+}
+#sign-en-div:hover > #box-six {
+    display: block;
+}
+
+#element-kiosk:hover {
+    transform: scale(1.1);
+}
+#kiosk-div:hover > #box-eight {
+    display: block;
+    z-index: 400;
+}
+
+/* Text Boxes*/
+
+#box-six {
+    position: absolute;
+    top: 19%;
+    left: 2%;
+    z-index: 406;
+    display: none;
+}
+
+#box-seven {
+    position: absolute;
+    top: 20.3%;
+    left: 19%;
+    z-index: 407;
+    display: none;
+}
+
+#box-eight {
+    display: none;
+    z-index: 408;
+    top: 18.7%;
+    left: 54%;
+}
+
+/* Pier objects*/
+
+#yes-ticket {
+    text-align: center;
+    display: block;
+}
+#element-mann-en-bod {
+    position: absolute;
+    width: 3%;
+    top: 47%;
+    left: 30%;
+    z-index: 402;
+}
+
+#element-mann-en-head {
+    position: absolute;
+    width: 3%;
+    top: 47%;
+    left: 30%;
+    z-index: 402;
+    animation: mannEnHead 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-delay: 0.4s;
+}
+
+#element-mann-to-bod {
+    position: absolute;
+    width: 3%;
+    left: 42%;
+    top: 47%;
+    z-index: 403;
+}
+
+#element-mann-to-head {
+    position: absolute;
+    width: 3%;
+    left: 42%;
+    top: 47%;
+    z-index: 403;
+    animation: mannEnHead 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+#element-sign-en {
+    position: absolute;
+    z-index: 404;
+    width: 5.5%;
+    top: 46%;
+    left: 8%;
+}
+
+#element-sign-to {
+    position: absolute;
+    z-index: 405;
+    width: 8%;
+    top: 47.5%;
+    left: 24%;
+}
+
+/* Underwater objects */
+
+#nemo-img {
+    position: absolute;
+    z-index: 308;
+    width: 8%;
+    top: 0%;
+    left: 10%;
+    animation: nemoSwim 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+#dory-img {
+    position: absolute;
+    z-index: 208;
+    width: 8%;
+    top: -80%;
+    left: 30%;
+    animation: dorySwim 12s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+/* 
+Animations
+    */
+
+@keyframes mannEnHead {
+    0% {
+        top: 47%;
+    }
+    50% {
+        top: 47.4%;
+    }
+    100% {
+        top: 47%;
+    }
+}
+
+@keyframes boatFloat {
+    0% {
+        transform: rotateZ(0deg);
+        top: -110%;
+    }
+    50% {
+        transform: rotateZ(2deg);
+        top: -110%;
+    }
+    100% {
+        transform: rotateZ(0deg);
+        top: -110%;
+    }
+}
+
+@keyframes nemoSwim {
+    0% {
+        left: 10%;
+        top: 0%;
+        transform: rotateY(0deg);
+    }
+    24% {
+        left: 15%;
+        top: 2%;
+        transform: rotateY(0deg);
+    }
+    25% {
+        left: 15%;
+        transform: rotateY(180deg);
+    }
+    74% {
+        left: 5%;
+        top: -2%;
+        transform: rotateY(180deg);
+    }
+    75% {
+        left: 5%;
+        transform: rotateY(0deg);
+    }
+    100% {
+        top: 0%;
+        transform: rotateY(0deg);
+    }
+}
+
+@keyframes dorySwim {
+    0% {
+        left: 30%;
+        top: -80%;
+        transform: rotateY(0deg);
+    }
+    24% {
+        left: 40%;
+        top: -84%;
+        transform: rotateY(0deg);
+    }
+    25% {
+        left: 40%;
+        transform: rotateY(180deg);
+    }
+    74% {
+        left: 10%;
+        top: -78%;
+        transform: rotateY(180deg);
+    }
+    75% {
+        left: 10%;
+        transform: rotateY(0deg);
+    }
+    100% {
+        top: -80%;
+        transform: rotateY(0deg);
+    }
+}

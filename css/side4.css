@@ -1,0 +1,440 @@
+#progress-1 {
+    background: rgb(10, 212, 71);
+}
+
+/* Horizon */
+#sky {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row;
+    background-color: rgb(10, 10, 133);
+    animation-name: sky;
+    animation-duration: 10s;
+    position: relative;
+    width: 100%;
+    height: 50%;
+    z-index: 0;
+    animation-fill-mode: forwards;
+}
+
+.ocean-container {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    width: 100%;
+    height: 17%;
+}
+.ocean {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#ocean-1 {
+    background-color: rgb(23, 13, 161);
+    z-index: 100;
+}
+#ocean-2 {
+    background-color: rgb(23, 13, 161);
+    z-index: 200;
+}
+#ocean-3 {
+    background-color: rgb(23, 13, 161);
+    z-index: 300;
+}
+
+.ocean-fg {
+    opacity: 85%;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+#ocean-1-fg {
+    background-color: rgb(16, 12, 75);
+    z-index: 199;
+}
+#ocean-2-fg {
+    background-color: rgb(16, 12, 75);
+    z-index: 299;
+}
+#ocean-3-fg {
+    background-color: rgb(16, 12, 75);
+    z-index: 399;
+}
+/* Horizon end */
+
+/* Horizon elements start */
+#cloud-1 {
+    display: flex;
+    opacity: 95%;
+    animation: cloud-1 60s linear infinite;
+    animation-delay: 0s;
+    position: relative;
+}
+
+.cloud-1-img {
+    width: 250px;
+    filter: invert(85%);
+    opacity: 0.8;
+}
+
+#cloud-2 {
+    display: flex;
+    opacity: 95%;
+    animation: cloud-2 35s linear infinite;
+    position: relative;
+}
+
+.cloud-2-img {
+    width: 150px;
+    filter: invert(90%);
+    opacity: 0.8;
+}
+
+#cloud-3 {
+    display: flex;
+    opacity: 95%;
+    animation: cloud-3 55s linear infinite;
+    position: relative;
+}
+
+.cloud-3-img {
+    width: 350px;
+    filter: invert(55%);
+}
+
+#cloud-4 {
+    display: flex;
+    opacity: 95%;
+    animation: cloud-4 60s linear infinite;
+    animation-delay: -45s;
+    position: relative;
+}
+
+.cloud-4-img {
+    width: 150px;
+    filter: invert(70%);
+}
+
+#sun {
+    display: flex;
+    position: relative;
+    z-index: -100;
+    left: 1200px;
+    top: -120px;
+}
+
+.sun-img {
+    width: 250px;
+    animation-name: sun;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+
+#lightning {
+    display: flex;
+    position: relative;
+    z-index: -1;
+    left: -1000px;
+    top: -160px;
+}
+
+.lightning-img {
+    width: 200px;
+    animation-name: lightning-1;
+    animation-duration: 5s;
+    animation-delay: 8s;
+    animation-iteration-count: infinite;
+    opacity: 0%;
+}
+/* Horizon elements end */
+
+/* Sea elements start */
+#sign-1 {
+    display: flex;
+    position: relative;
+    z-index: 201;
+    left: 1200px;
+}
+
+.sign-img {
+    width: 150px;
+}
+
+.fish-elem {
+    display: flex;
+    animation-name: fish-swim;
+    animation-duration: 40s;
+    animation-iteration-count: infinite;
+    position: relative;
+    z-index: 205;
+    height: auto;
+    width: 200%;
+    left: 100%;
+}
+
+.fish-img {
+    width: 200px;
+}
+
+#fish-2 {
+    z-index: 199;
+    animation-name: fish-swim-2;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+    animation-direction: initial;
+    position: absolute;
+    left: 100%;
+}
+
+.fish-img-2 {
+    transform: rotateY(180deg);
+    max-width: 150px;
+}
+
+#jelly {
+    display: flex;
+    position: relative;
+    z-index: 303;
+    height: auto;
+    left: -800px;
+}
+
+.jelly-img {
+    width: 70px;
+    animation-name: jelly-1;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+.boat-elem {
+    display: flex;
+    animation-name: boat-to-right;
+    animation-duration: 20s;
+    animation-fill-mode: forwards;
+    position: relative;
+    z-index: 210;
+    top: 40px;
+}
+
+.boat-img {
+    width: 350px;
+}
+
+.shark-elem {
+    z-index: 305;
+    height: 150%;
+    width: 150%;
+    display: flex;
+    animation-name: shark-swim;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    position: relative;
+}
+
+.shark-img {
+    width: 250px;
+}
+
+#tentacle {
+    z-index: 350;
+    display: flex;
+    position: relative;
+    right: 1100px;
+    bottom: -20px;
+}
+
+.tentacle-img {
+    width: 250px;
+    height: 200px;
+    animation-name: tentacle-1;
+    animation-duration: 10s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+/* Sea elements end */
+
+/* Animations start */
+@keyframes sky {
+    from {
+        background-color: rgb(0, 47, 255);
+    }
+    to {
+        background-color: rgb(4, 4, 48);
+    }
+}
+
+@keyframes cloud-1 {
+    0% {
+        top: -85px;
+        left: -36%;
+    }
+
+    100% {
+        top: -85px;
+        left: 100%;
+    }
+}
+
+@keyframes cloud-2 {
+    0% {
+        top: -144px;
+        left: -36%;
+    }
+
+    100% {
+        top: -144px;
+        left: 100%;
+    }
+}
+
+@keyframes cloud-3 {
+    0% {
+        top: -200px;
+        left: -46%;
+    }
+
+    100% {
+        top: -250px;
+        left: 100%;
+    }
+}
+
+@keyframes cloud-4 {
+    0% {
+        top: -178px;
+        left: -96%;
+    }
+
+    100% {
+        top: -178px;
+        left: 100%;
+    }
+}
+
+@keyframes sun {
+    from {
+        opacity: 100%;
+    }
+    to {
+        opacity: 0%;
+    }
+}
+
+@keyframes lightning-1 {
+    0% {
+        opacity: 0%;
+    }
+    50% {
+        opacity: 0%;
+    }
+    75% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 0%;
+    }
+}
+
+@keyframes fish-swim {
+    0% {
+        left: -100%;
+        transform: rotateZ(-40deg);
+        top: -110px;
+    }
+
+    100% {
+        left: 100%;
+        transform: rotateZ(0deg);
+        top: 100px;
+    }
+}
+
+@keyframes fish-swim-2 {
+    0% {
+        left: 100%;
+        transform: rotateZ(40deg);
+        top: 20px;
+    }
+    30% {
+        top: -50px;
+    }
+    43% {
+        top: 20px;
+    }
+    100% {
+        left: -10%;
+        transform: rotateZ(0deg);
+        top: 20px;
+    }
+}
+
+@keyframes jelly-1 {
+    0% {
+        transform: translateY(-50%);
+    }
+
+    50% {
+        transform: translateY(50%);
+    }
+
+    100% {
+        transform: translateY(-50%);
+    }
+}
+
+@keyframes tentacle-1 {
+    0% {
+        transform: translateY(70%);
+    }
+
+    60% {
+        transform: translateY(70%);
+    }
+
+    100% {
+        transform: translateY(10%);
+    }
+}
+
+@keyframes boat-to-right {
+    0% {
+        left: -30%;
+        transform: rotateZ(-20deg);
+    }
+
+    100% {
+        transform: rotateZ(0deg);
+        left: 75%;
+    }
+}
+
+@keyframes shark-swim {
+    0% {
+        top: -40px;
+        left: -25%;
+        transform: rotateZ(0deg);
+    }
+    25% {
+        top: -30px;
+        transform: rotateZ(-20deg);
+    }
+    50% {
+        top: -20px;
+        transform: rotateZ(0deg);
+    }
+    75% {
+        top: -35px;
+        transform: rotateZ(-20deg);
+    }
+    100% {
+        transform: rotateZ(0deg);
+        top: -10px;
+        left: 105%;
+    }
+}
+
+/* Animations end */

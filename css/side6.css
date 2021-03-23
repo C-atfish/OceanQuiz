@@ -1,0 +1,198 @@
+/* the container that holds the game. The shaking effect that happens when Kraken takes the plane goes here */
+#main {
+    animation: shake-screen 100ms linear;
+    animation-iteration-count: 30;
+    animation-timing-function: steps(3);
+    animation-delay: 6s;
+}
+
+#questions-box {
+    animation-delay: 20s;
+}
+
+#sun {
+    display: none;
+}
+
+.resize-cloud {
+    width: 500px;
+}
+
+/* progress-* shows how many correct questions that are answered */
+#progress-bar-divider-1,
+#progress-bar-divider-2 {
+    background: rgb(10, 212, 71);
+}
+#progress-1,
+#progress-2,
+#progress-3 {
+    background: rgb(10, 212, 71);
+}
+
+#boat {
+    left: -30%;
+    animation-name: move-boat;
+    animation-duration: 15s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-delay: 10s;
+    position: relative;
+    z-index: 201;
+}
+#plane {
+    background-color: transparent;
+    position: absolute;
+    left: 100%;
+    z-index: 105;
+    animation: plane-crash 5s ease-in-out forwards,
+        plane-gets-taken 10s ease-in-out forwards;
+    animation-delay: 0ms, 10s;
+}
+#plane img {
+    width: 300px;
+    height: auto;
+    transform: rotateY(180deg);
+}
+
+/*
+Kraken related styling
+*/
+#kraken img {
+    max-height: 600px;
+}
+
+#kraken {
+    position: absolute;
+    right: 5%;
+    z-index: 205;
+    top: 200%;
+    animation: kraken-appears 5s ease-in-out forwards,
+        kraken-wobbles 2s alternate-reverse;
+    animation-iteration-count: 1, infinite;
+    animation-delay: 13s;
+}
+
+#tentacle {
+    top: 400px;
+    left: 300px;
+    position: absolute;
+    z-index: 101;
+    animation: tentacle-takes-plane 10s ease-in-out forwards;
+    animation-delay: 5s;
+}
+
+#tentacle img {
+    max-height: 300px;
+}
+
+/* Sea creatures end */
+
+/* v ANIMATIONS v */
+
+@keyframes kraken-wobbles {
+    from {
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(20deg);
+    }
+}
+
+/* Kraken (not tentacle) comes up from the water */
+@keyframes kraken-appears {
+    from {
+        top: 200%;
+    }
+
+    to {
+        top: 0;
+    }
+}
+/* The airplane gets dragged under water by a tentacle */
+@keyframes plane-gets-taken {
+    0% {
+        top: 400px;
+    }
+    100% {
+        top: 1200px;
+        transform: rotateZ(-90deg);
+    }
+}
+/* The airplane gets dragged under water by a tentacle */
+@keyframes tentacle-takes-plane {
+    0%,
+    100% {
+        top: 200px;
+    }
+    50% {
+        top: -50px;
+        transform: rotateZ(-90deg);
+    }
+    100% {
+        transform: rotateZ(-90deg);
+    }
+}
+
+/* The plane crashes into the water */
+@keyframes plane-crash {
+    0% {
+        transform: rotateZ(0deg);
+        left: 100%;
+        top: 0;
+    }
+    100% {
+        transform: rotateZ(-40deg);
+        top: 400px;
+        left: 300px;
+    }
+}
+
+/* The boat moves from left to right of the screen. Slightly different from page5. Stops sooner */
+@keyframes move-boat {
+    25%,
+    75% {
+        transform: rotateX(-30deg);
+    }
+    0% {
+        top: 50px;
+        left: -30%;
+        transform: rotateZ(0deg);
+    }
+    25% {
+        top: 80px;
+        transform: rotateZ(-20deg);
+    }
+    50% {
+        top: 65px;
+        transform: rotateZ(0deg);
+    }
+    75% {
+        top: 90px;
+        transform: rotateZ(-20deg);
+    }
+    100% {
+        transform: rotateZ(0deg);
+        top: 50px;
+        left: 50%;
+    }
+}
+
+@keyframes questions-enter-screen {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(250%);
+    }
+}
+
+/* The screen shakes when the tentacle takes the airplane */
+@keyframes shake-screen {
+    0% {
+        transform: rotateZ(-1deg);
+    }
+    100% {
+        transform: rotateZ(1deg);
+    }
+}

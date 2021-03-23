@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="no">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Stuck in Bermuda</title>
+        <link
+            href="../fonts/FrederickatheGreat-Regular.ttf"
+            rel="preload"
+            as="font"
+            type="font/ttf"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../css/common.css" />
+        <link rel="stylesheet" href="../css/side6.css" />
+    </head>
+
+    <body>
+        <section id="game-statistics">
+            <header>
+                <h1>Stuck in bermuda</h1>
+                <!-- Keeps track on how many correct answers you've got -->
+                <div id="game-progression">
+                    <h2>Your progress:</h2>
+                    <div id="progress-1" class="progress-bar"></div>
+                    <div
+                        class="progress-bar-divider"
+                        id="progress-bar-divider-1"
+                    ></div>
+                    <div id="progress-2" class="progress-bar"></div>
+                    <div
+                        class="progress-bar-divider"
+                        id="progress-bar-divider-2"
+                    ></div>
+                    <div id="progress-3" class="progress-bar"></div>
+                </div>
+            </header>
+        </section>
+
+        <section id="main">
+            <div id="plane">
+                <img src="../img/airplane.png" alt="fly" />
+            </div>
+
+            <!-- elements in the horizon -->
+            <div id="sky" class="sky-stormy">
+                <div class="element-cloud" id="cloud">
+                    <img
+                        class="resize-cloud element-dark-cloud"
+                        src="../img/cloud.png"
+                        alt="fly"
+                    />
+                </div>
+                <div class="element-cloud" id="cloud2">
+                    <img
+                        class="resize-cloud element-dark-cloud"
+                        src="../img/cloud2.png"
+                        alt="fly"
+                    />
+                </div>
+                <div class="element-cloud" id="cloud3">
+                    <img
+                        class="resize-cloud element-dark-cloud"
+                        src="../img/cloud3.png"
+                        alt="fly"
+                    />
+                </div>
+                <div class="element-cloud" id="cloud4">
+                    <img
+                        class="resize-cloud element-dark-cloud"
+                        src="../img/cloud4.png"
+                        alt="fly"
+                    />
+                </div>
+                <div class="element-sun" id="sun">
+                    <img class="resize-sun" src="../img/sun.png" alt="sol" />
+                </div>
+                <div class="lightning-rod">
+                    <img src="../img/lightning.png" alt="lyn" />
+                </div>
+
+                <div class="lightning-rod">
+                    <img src="../img/lightning.png" alt="lyn" />
+                </div>
+                <div id="lightning-flash"></div>
+            </div>
+            <!-- horizon elements end -->
+
+            <!-- Sea -->
+            <div class="ocean-container">
+                <div class="ocean ocean-1-stormy" id="ocean-1"></div>
+
+                <!-- elements in sea level 2 between here -->
+
+                <div class="element-bg" id="boat">
+                    <img src="../img/boat.png" alt="båt" />
+                </div>
+                <div id="tentacle">
+                    <img src="../img/tentacle.png" alt="tentakkel" />
+                </div>
+
+                <div id="kraken">
+                    <img src="../img/kraken.png" alt="kraken" />
+                </div>
+
+                <!-- and here-->
+
+                <div id="ocean-1-fg" class="ocean-fg ocean-1-stormy"></div>
+            </div>
+
+            <div class="ocean-container">
+                <div id="ocean-2" class="ocean ocean-2-stormy"></div>
+
+                <!-- elements in sea level 3 between here -->
+
+                <div class="piranha">
+                    <img src="../img/piraya.png" alt="piraya" />
+                </div>
+
+                <!-- and here-->
+
+                <div id="ocean-2-fg" class="ocean-fg ocean-2-stormy"></div>
+            </div>
+
+            <div class="ocean-container">
+                <div id="ocean-3" class="ocean ocean-3-stormy"></div>
+
+                <!-- elements in sea level 2 between here -->
+                <div class="piranha">
+                    <img src="../img/piraya.png" alt="piraya" />
+                </div>
+
+                <!-- and here-->
+
+                <div id="ocean-3-fg" class="ocean-fg ocean-3-stormy"></div>
+            </div>
+            <!-- End of sea -->
+
+            <!-- Displays the question asked -->
+            <div id="questions-box">
+                <div class="questions"><h1>Hopp over bord?!</h1></div>
+
+                <a href="side7.html"><div class="questions answer">Ja</div></a>
+                <a href="side8.html"><div class="questions answer">Nei</div></a>
+            </div>
+        </section>
+    </body>
+</html>

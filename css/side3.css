@@ -1,0 +1,332 @@
+#main {
+    display: flex;
+    top: 50px;
+    flex-direction: column;
+    overflow: hidden;
+    margin: 0%;
+    padding-top: 0%;
+}
+
+#sky {
+    top: 0px;
+    display: flex;
+    z-index: 1;
+    align-items: flex-end;
+    flex-direction: row;
+    position: relative;
+    width: 100%;
+    height: 70%;
+    background-color: #a6dbfa;
+}
+
+/* Ocean */
+
+.ocean-container {
+    position: relative;
+    z-index: 60;
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 50%;
+    background-color: #4ba0d1;
+}
+
+/* Landscape end */
+
+/* game start */
+
+.info-box,
+#questions-box {
+    z-index: 10;
+    left: 10%;
+    top: 10%;
+    animation: unset;
+}
+
+#questions-box a {
+    display: block;
+}
+
+/* game end */
+
+/* Scenery elements start */
+
+#sun {
+    display: flex;
+    z-index: 2;
+    margin-bottom: 5%;
+    animation-name: sun;
+    animation-duration: 40s;
+    animation-iteration-count: infinite;
+    position: relative;
+}
+
+#cloud {
+    display: flex;
+    opacity: 90%;
+    z-index: 3;
+    animation: cloud 60s linear infinite;
+    animation-delay: 0s;
+    position: relative;
+}
+
+#cloud2 {
+    display: flex;
+    opacity: 70%;
+    z-index: 3;
+    animation: cloud2 60s linear infinite;
+    animation-delay: -30s;
+    position: relative;
+}
+
+#cloud3 {
+    display: flex;
+    opacity: 95%;
+    z-index: 3;
+    animation: cloud3 60s linear infinite;
+    animation-delay: -15s;
+    position: relative;
+}
+
+#cloud4 {
+    display: flex;
+    opacity: 95%;
+    z-index: 3;
+    animation: cloud4 60s linear infinite;
+    animation-delay: -45s;
+    position: relative;
+}
+
+#boat {
+    z-index: 3;
+    display: flex;
+    animation-name: boat;
+    top: 75%;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+}
+
+#bird2 {
+    top: 500px;
+    position: fixed;
+    display: flex;
+    z-index: 5;
+    animation-name: bird2;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    position: relative;
+}
+
+#dory {
+    top: 500px;
+    opacity: 30%;
+    height: 100px;
+    position: fixed;
+    display: flex;
+    z-index: 5;
+    animation-name: dory;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    position: relative;
+}
+
+#turtle {
+    top: 80%;
+    opacity: 40%;
+    height: 50px;
+    position: fixed;
+    display: flex;
+    z-index: 5;
+    animation-name: turtle;
+    animation-duration: 20s;
+    animation-delay: -15s;
+    animation-iteration-count: infinite;
+    position: relative;
+}
+
+#jelly {
+    top: 80%;
+    opacity: 20%;
+    height: 50px;
+    position: fixed;
+    display: flex;
+    z-index: 5;
+    animation-name: jelly;
+    animation-duration: 10s;
+    animation-delay: -15s;
+    animation-iteration-count: infinite;
+    position: relative;
+}
+
+#dolphin {
+    top: -20px;
+    opacity: 50%;
+    height: 200px;
+    position: fixed;
+    display: flex;
+    z-index: 12;
+    animation-name: dolphin;
+    animation-duration: 20s;
+    animation-delay: -15s;
+    animation-iteration-count: infinite;
+    position: relative;
+}
+
+#mrcrabs {
+    top: 0%;
+    opacity: 10%;
+    height: 100px;
+    position: fixed;
+    display: flex;
+    z-index: 12;
+    animation-name: mrcrabs;
+    animation-duration: 5s;
+    animation-delay: -15s;
+    animation-iteration-count: infinite;
+    position: relative;
+}
+
+/* Scenery elements end */
+
+/* Animations start */
+
+@keyframes boat {
+    0% {
+        top: 50px;
+        left: -60%;
+        transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(0deg);
+        top: 50px;
+        left: 105%;
+    }
+}
+
+@keyframes cloud {
+    0% {
+        top: -400px;
+        left: -16%;
+    }
+    100% {
+        top: -400px;
+        left: 100%;
+    }
+}
+
+@keyframes cloud2 {
+    0% {
+        top: -144px;
+        left: -16%;
+    }
+    100% {
+        top: -144px;
+        left: 100%;
+    }
+}
+
+@keyframes cloud3 {
+    0% {
+        top: -250px;
+        left: -16%;
+    }
+    100% {
+        top: -250px;
+        left: 100%;
+    }
+}
+
+@keyframes cloud4 {
+    0% {
+        top: -178px;
+        left: -16%;
+    }
+    100% {
+        top: -178px;
+        left: 100%;
+    }
+}
+
+@keyframes sun {
+    from {
+        top: -134px;
+        left: 70%;
+        transform: rotate(0deg);
+    }
+    to {
+        top: -134px;
+        left: 70%;
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes dory {
+    0% {
+        top: -200px;
+        left: 60%;
+    }
+    50% {
+        top: -150px;
+        left: 60%;
+    }
+    100% {
+        top: -200px;
+        left: 60%;
+    }
+}
+
+@keyframes turtle {
+    0% {
+        top: -100px;
+        left: 100%;
+    }
+    100% {
+        top: -100px;
+        left: -20%;
+    }
+}
+
+@keyframes jelly {
+    0% {
+        top: -150px;
+        left: 20%;
+    }
+    50% {
+        top: -50px;
+        left: 20%;
+    }
+    100% {
+        top: -150px;
+        left: 20%;
+    }
+}
+
+@keyframes dolphin {
+    0% {
+        top: -100px;
+        left: -50%;
+        transform: rotateZ(30deg);
+    }
+    100% {
+        top: -100px;
+        left: 150%;
+        transform: rotateZ(50deg);
+    }
+}
+
+@keyframes mrcrabs {
+    0% {
+        top: -10px;
+        left: -20%;
+    }
+    50% {
+        top: -10px;
+        left: -10%;
+    }
+    100% {
+        top: -10px;
+        left: -20%;
+    }
+}
+
+/* Animations end */

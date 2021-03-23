@@ -1,0 +1,559 @@
+/* General styling */
+
+:root {
+    font-family: sans-serif;
+    overflow: hidden;
+}
+
+a:visited,
+a,
+h1 {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 20px;
+    position: relative;
+}
+
+a:hover {
+    font-size: 130%;
+    color: rgb(10, 212, 71);
+}
+
+/* The main container that holds the game */
+#main {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    left: 0;
+    right: 0;
+    top: 50px;
+    bottom: 0;
+}
+
+/*
+USER INTERACTION & INFORMATION
+*/
+
+/* progress bar*/
+#game-statistics {
+    position: absolute;
+    height: 50px;
+    left: 0;
+    right: 0;
+    top: 0;
+    background: rgb(255, 120, 10);
+}
+
+#game-statistics header {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    bottom: 10px;
+}
+
+#game-statistics,
+.info-box,
+#questions-box {
+    font-family: "Fredericka the Great", cursive;
+    text-shadow: 3px 2px #000;
+}
+
+#game-progression {
+    margin-right: 20px;
+    color: black;
+    display: inline-block;
+    justify-self: center;
+    margin-bottom: 20px;
+}
+
+#game-progression h2,
+#game-statistics h1 {
+    display: inline-block;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    padding: 0px 10px 10px 10px;
+}
+
+.progress-bar {
+    border-radius: 30px;
+    display: inline-block;
+    width: 70px;
+    height: 20px;
+    background-color: white;
+    border: 1px solid black;
+    margin: 0;
+}
+
+.progress-bar-divider {
+    margin: 0;
+    position: relative;
+    bottom: 10px;
+    display: inline-block;
+    background: white;
+    height: 3px;
+    width: 50px;
+    align-self: center;
+    justify-self: center;
+}
+
+/* progress green color to use elsewhere:  rgb(10, 212, 71); */
+#progress-bar-divider-1,
+#progress-bar-divider-2 {
+    background: white;
+}
+#progress-1,
+#progress-2,
+#progress-3 {
+    background: white;
+}
+/* progress bar end*/
+#questions-box,
+.info-box {
+    color: white;
+    padding: 50px;
+    width: 300px;
+    height: 200px;
+    background: #ff780ae6;
+    position: absolute;
+    border-radius: 20px;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.6);
+}
+
+#questions-box {
+    z-index: 500;
+    left: 10%;
+    top: -50%;
+    animation: questions-enter-screen 3s ease-in-out forwards;
+    animation-delay: 12s;
+    z-index: 600;
+}
+#questions-box a {
+    display: block;
+}
+
+/* info boxes on page1 */
+.info-box {
+    width: 250px;
+    height: 150px;
+}
+
+.info-header {
+    text-align: center;
+}
+
+.info-text {
+    text-align: center;
+}
+
+/* USER INTERACTION END */
+
+/* Landscape start */
+
+#lightning-flash {
+    z-index: 400;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: transparent;
+    position: absolute;
+    animation: flash 4s;
+    animation-fill-mode: none;
+    animation-iteration-count: 3;
+}
+
+.lightning-rod {
+    align-self: flex-start;
+    position: relative;
+    margin-left: 200px;
+    margin-right: 200px;
+    z-index: 10;
+}
+
+.lightning-rod img {
+    height: 500px;
+    background-color: transparent;
+    animation: lightning-img-flash 3s infinite;
+    animation-timing-function: steps(3);
+}
+
+#sky {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row;
+    position: relative;
+    width: 100%;
+    height: 50%;
+    z-index: 0;
+}
+
+.sky-sunny {
+    background-image: linear-gradient(rgb(87, 124, 248), rgb(50, 50, 255));
+}
+.sky-stormy {
+    background-image: linear-gradient(
+        rgb(0, 0, 0),
+        rgb(7, 7, 29),
+        rgb(0, 0, 0)
+    );
+}
+
+/* Ocean */
+.ocean-1-sunny {
+    background-color: rgb(16, 13, 112);
+}
+.ocean-2-sunny {
+    background-image: linear-gradient(rgb(16, 13, 112), rgb(28, 12, 153));
+}
+.ocean-3-sunny {
+    background-image: linear-gradient(rgb(28, 12, 153), rgb(23, 13, 161));
+}
+
+.ocean-1-stormy {
+    background-image: linear-gradient(rgb(1, 0, 3), rgb(8, 7, 51));
+}
+.ocean-2-stormy {
+    background-image: linear-gradient(rgb(8, 7, 51), rgb(16, 13, 112));
+}
+.ocean-3-stormy {
+    background-image: linear-gradient(rgb(16, 13, 112), rgb(28, 12, 153));
+}
+
+.ocean-container {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    width: 100%;
+    height: 17%;
+}
+.ocean {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#ocean-1 {
+    z-index: 100;
+}
+#ocean-2 {
+    z-index: 200;
+}
+#ocean-3 {
+    z-index: 300;
+}
+
+.ocean-fg {
+    opacity: 85%;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+#ocean-1-fg {
+    z-index: 199;
+}
+#ocean-2-fg {
+    z-index: 299;
+}
+#ocean-3-fg {
+    z-index: 399;
+}
+
+.bg-opacity {
+    opacity: 80%;
+}
+/* Landscape end */
+
+/* Scenery elements start */
+.boat-reposition {
+    margin-left: 660px;
+}
+
+.element-sun {
+    z-index: 202;
+    width: 300px;
+    height: auto;
+}
+
+.element-cloud {
+    z-index: 302;
+    width: 1px;
+    height: auto;
+}
+
+.element-dark-cloud {
+    filter: invert(100%);
+}
+
+.element-boat {
+    z-index: 202;
+    width: 20%;
+    height: auto;
+}
+
+.element-horizon {
+    z-index: 102;
+    height: 75%;
+    width: 75%;
+}
+
+.resize-sun {
+    width: 300px;
+    height: auto;
+}
+
+.resize-cloud {
+    width: 300px;
+    height: auto;
+}
+
+/* infoboks */
+
+.info-header {
+    text-align: center;
+}
+
+.info-text {
+    text-align: center;
+}
+
+/* end of textboks */
+
+#sun {
+    display: flex;
+    animation-name: sun;
+    animation-duration: 40s;
+    animation-iteration-count: infinite;
+    position: relative;
+}
+
+#cloud {
+    display: flex;
+    opacity: 95%;
+    animation: cloud 60s linear infinite;
+    animation-delay: 0s;
+    position: relative;
+}
+
+#cloud2 {
+    display: flex;
+    opacity: 95%;
+    animation: cloud2 60s linear infinite;
+    animation-delay: -30s;
+    position: relative;
+}
+
+#cloud3 {
+    display: flex;
+    opacity: 95%;
+    animation: cloud3 60s linear infinite;
+    animation-delay: -15s;
+    position: relative;
+}
+
+#cloud4 {
+    display: flex;
+    opacity: 95%;
+    animation: cloud4 60s linear infinite;
+    animation-delay: -45s;
+    position: relative;
+}
+
+#boat {
+    display: flex;
+    animation-name: up-and-down;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    position: relative;
+}
+#boat img {
+    max-width: 350px;
+}
+
+/* sea creatures start */
+#kraken img {
+    max-height: 400px;
+}
+
+.piranha {
+    position: relative;
+}
+
+.piranha img {
+    max-width: 200px;
+}
+
+#ocean-2 + .piranha {
+    z-index: 200;
+    animation-name: piranha-swim-2;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 30s;
+    animation-direction: initial;
+}
+
+#ocean-3 + .piranha {
+    z-index: 304;
+    animation-name: piranha-swim-1;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 30s;
+    animation-direction: initial;
+}
+
+#ocean-2 + .piranha img {
+    transform: rotateY(180deg);
+    max-width: 150px;
+}
+/* sea creatures end */
+/* Scenery elements end */
+
+/* Animations start */
+
+@keyframes cloud {
+    0% {
+        top: -85px;
+        left: -16%;
+    }
+
+    100% {
+        top: -85px;
+        left: 100%;
+    }
+}
+
+@keyframes cloud2 {
+    0% {
+        top: -144px;
+        left: -16%;
+    }
+
+    100% {
+        top: -144px;
+        left: 100%;
+    }
+}
+
+@keyframes cloud3 {
+    0% {
+        top: -250px;
+        left: -16%;
+    }
+
+    100% {
+        top: -250px;
+        left: 100%;
+    }
+}
+
+@keyframes cloud4 {
+    0% {
+        top: -178px;
+        left: -16%;
+    }
+
+    100% {
+        top: -178px;
+        left: 100%;
+    }
+}
+
+@keyframes sun {
+    from {
+        top: -134px;
+        left: 80%;
+        transform: rotate(0deg);
+    }
+    to {
+        top: -134px;
+        left: 80%;
+        transform: rotate(360deg);
+    }
+}
+
+/* Animates the question box to come into view */
+@keyframes questions-enter-screen {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(250%);
+    }
+}
+
+/* Animation creatures start*/
+@keyframes piranha-swim-1 {
+    0% {
+        left: -10%;
+        transform: rotateZ(-40deg);
+        top: -30px;
+        opacity: 1;
+    }
+
+    100% {
+        left: 100%;
+        transform: rotateZ(20deg);
+        top: 5px;
+        opacity: 1;
+    }
+}
+
+@keyframes piranha-swim-2 {
+    0% {
+        left: 100%;
+        transform: rotateZ(40deg);
+        top: -30px;
+        opacity: 1;
+    }
+    30% {
+        top: -100px;
+    }
+    35% {
+        top: -50px;
+    }
+    100% {
+        left: -10%;
+        transform: rotateZ(-20deg);
+        top: 20px;
+        opacity: 1;
+    }
+}
+
+/* Animation creatures end*/
+
+/* Animates the lightning flashes in the sky */
+@keyframes lightning-img-flash {
+    0%,
+    40% {
+        opacity: 0%;
+    }
+    39%,
+    100% {
+        opacity: 100%;
+    }
+}
+
+/* White flash */
+@keyframes flash {
+    0%,
+    2%,
+    6%,
+    50%,
+    80% {
+        background-color: transparent;
+    }
+
+    1%,
+    5%,
+    51% {
+        background-color: white;
+        opacity: 80%;
+    }
+}
+
+/* Animations end */

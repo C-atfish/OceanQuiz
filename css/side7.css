@@ -1,0 +1,493 @@
+/* Ocean */
+
+#background-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    max-width: 400%;
+    max-height: 400%;
+    top: 0%;
+    left: 0%;
+    overflow: hidden;
+}
+
+#ocean-img {
+    position: absolute;
+    width: 110%;
+    height: 100%;
+    transform: scale(4);
+    top: 140%;
+    left: 0%;
+    animation: drownOcean 30s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+
+/* Images */
+
+#jellyfish {
+    position: absolute;
+    top: 80%;
+    left: 10%;
+    width: 10%;
+    animation: jellyfishJump 10s;
+    transition-timing-function: ease-in-out;
+}
+#jelly-two {
+    position: absolute;
+    top: 50%;
+    width: 8%;
+    animation: jellyfishJump 11s;
+    animation-timing-function: ease-in-out;
+    z-index: 1;
+}
+
+#drowning-man-img {
+    position: absolute;
+    width: 20%;
+    top: -40%;
+    left: 40%;
+    z-index: 10;
+    opacity: 1;
+    display: block;
+
+    animation: manDrowning 30s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+#shipwreck-water {
+    position: relative;
+    z-index: 1;
+    width: 10%;
+    top: 100%;
+    left: 80%;
+    animation: boatShow 5.5s;
+    animation-delay: 24.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    opacity: 0;
+}
+
+#electric-eel {
+    position: absolute;
+    z-index: 80;
+    width: 25%;
+    top: 0%;
+    left: -50%;
+    display: block;
+    opacity: 0.7;
+    animation: eelLoop 8s;
+    animation-delay: 16s;
+    animation-iteration-count: infinite;
+}
+
+#airplane-water {
+    position: absolute;
+    top: -12%;
+    left: -12%;
+    width: 4%;
+    opacity: 0.2;
+    z-index: 1;
+    transform: rotateZ(28deg);
+    overflow: hidden;
+    animation: crashPlane 60s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+
+#drowning-bubble-img {
+    position: absolute;
+    top: -60%;
+    left: 30%;
+    width: 100%;
+    height: 40%;
+    z-index: 2;
+    animation: bubbleAnimationMove 30s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+#anglerfish-id {
+    position: absolute;
+    top: 0%;
+    left: -10%;
+    width: 20%;
+    z-index: 1;
+}
+
+/* DIVS*/
+#jelly-div {
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    animation: byebyeJelly 20s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    z-index: 1;
+}
+
+#angler-div {
+    position: absolute;
+    top: 40%;
+    left: 110%;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    animation: anglerSwim 33s;
+    animation-fill-mode: forwards;
+}
+
+#moving-man {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: block;
+    left: 0%;
+    animation: moveMan 30s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+#electric-div {
+    position: relative;
+    display: block;
+    z-index: 9;
+    width: 40%;
+    height: 20%;
+    top: 15%;
+    left: 120%;
+    animation: showEel 32s;
+    animation-delay: 8s;
+    animation-fill-mode: forwards;
+}
+
+#airplane-div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#bubble-div {
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    top: 0%;
+    left: 15%;
+    z-index: 3;
+    animation: bubbleBlink 20s;
+    animation-fill-mode: forwards;
+}
+
+#z-index-id {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+    animation: zAnimation 8s;
+    animation-delay: 20s;
+    animation-iteration-count: infinite;
+}
+
+/* TEXT and LINK*/
+
+#dead-text {
+    position: absolute;
+    top: 25%;
+    left: 40%;
+    font-size: 350%;
+    animation: fadeInText 36s;
+    animation-fill-mode: forwards;
+    z-index: 11;
+}
+
+#start-again-link {
+    position: absolute;
+    top: 42%;
+    left: 42%;
+    font-size: 180%;
+    z-index: 100;
+    animation: fadeInText 39s;
+    animation-fill-mode: forwards;
+}
+
+/* Progress Bar*/
+#progress-bar-divider-1,
+#progress-bar-divider-2 {
+    background: rgb(212, 10, 10);
+}
+#progress-1,
+#progress-2,
+#progress-3,
+#progress-4 {
+    background: rgb(212, 10, 10);
+}
+
+/* Scenery elements end */
+
+/* Animations start */
+
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+    }
+    70% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0.8;
+    }
+}
+
+@keyframes bubbleAnimationMove {
+    0% {
+        top: -60%;
+    }
+    10% {
+        top: -60%;
+    }
+    100% {
+        top: 30%;
+    }
+}
+
+@keyframes bubbleBlink {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    60% {
+        opacity: 0.7;
+    }
+    69% {
+        opacity: 0.7;
+    }
+    75% {
+        opacity: 0;
+    }
+    85% {
+        opacity: 0;
+    }
+    95% {
+        opacity: 0.3;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes manDrowning {
+    0% {
+        top: -50%;
+        opacity: 1;
+    }
+    20% {
+        opacity: 1;
+    }
+    50% {
+        top: 0%;
+        opacity: 0.7;
+    }
+    100% {
+        top: 50%;
+        opacity: 0.4;
+    }
+}
+
+/* Animations end */
+
+@keyframes jellyfishJump {
+    0% {
+        left: 10%;
+    }
+    25% {
+        left: 15%;
+    }
+    50% {
+        left: 10%;
+    }
+    75% {
+        left: 5%;
+    }
+    100% {
+        left: 10%;
+    }
+}
+
+@keyframes byebyeJelly {
+    0% {
+        top: 0%;
+        opacity: 0.3;
+    }
+    100% {
+        top: -120%;
+        opacity: 0.7;
+    }
+}
+
+@keyframes crashPlane {
+    0% {
+        top: -12%;
+        left: -12%;
+    }
+    100% {
+        top: 100%;
+        left: 100%;
+    }
+}
+
+@keyframes eelLoop {
+    0% {
+        left: -50%;
+        transform: rotateY(0deg);
+        filter: drop-shadow(0px 0px 0px rgb(255, 255, 183));
+    }
+    1% {
+        transform: rotateY(180deg);
+    }
+    20% {
+        filter: drop-shadow(1px 1px 5px rgb(255, 255, 183));
+    }
+    40% {
+        filter: drop-shadow(0px 0px 0px rgb(255, 255, 183));
+    }
+    49% {
+        transform: rotateY(180deg);
+    }
+    50% {
+        left: 40%;
+        transform: rotateY(0deg);
+    }
+    60% {
+        filter: drop-shadow(1px 1px 5px rgb(255, 255, 183));
+    }
+    99% {
+        transform: rotateY(0deg);
+    }
+    80% {
+        filter: drop-shadow(0px 0px 0px rgb(255, 255, 183));
+    }
+    100% {
+        left: -50%;
+        transform: rotateY(180deg);
+        filter: drop-shadow(1px 1px 5px rgb(255, 255, 183));
+    }
+}
+
+@keyframes zAnimation {
+    0% {
+        z-index: 1;
+    }
+    49% {
+        z-index: 1;
+    }
+    50% {
+        z-index: 15;
+    }
+    99% {
+        z-index: 15;
+    }
+    100% {
+        z-index: 1;
+    }
+}
+
+@keyframes showEel {
+    0% {
+        left: 120%;
+        top: 35%;
+        z-index: 9;
+    }
+
+    25% {
+        left: 70%;
+        top: 15%;
+        z-index: 9;
+    }
+    26% {
+        z-index: 12;
+    }
+    50% {
+        top: -25%;
+        left: 70%;
+        z-index: 12;
+    }
+    55% {
+        top: -25%;
+    }
+    100% {
+        top: 23%;
+        left: 50%;
+        z-index: 12;
+    }
+}
+
+@keyframes boatShow {
+    0% {
+        top: 100%;
+        opacity: 0;
+    }
+    100% {
+        top: 78%;
+        opacity: 0.3;
+    }
+}
+
+@keyframes moveMan {
+    0% {
+        left: 0%;
+    }
+    10% {
+        left: -2%;
+    }
+    20% {
+        left: 0%;
+    }
+    30% {
+        left: -2%;
+    }
+    40% {
+        left: 0%;
+    }
+    50% {
+        left: -2%;
+    }
+    60% {
+        left: 0%;
+    }
+    70% {
+        left: -2%;
+    }
+    80% {
+        left: 0%;
+    }
+    90% {
+        left: -2%;
+    }
+    100% {
+        left: 0%;
+    }
+}
+
+@keyframes anglerSwim {
+    0% {
+        left: 110%;
+    }
+    100% {
+        left: -50%;
+    }
+}
+
+@keyframes drownOcean {
+    0% {
+        top: 140%;
+    }
+    100% {
+        top: -150%;
+    }
+}
